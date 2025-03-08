@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import natalya from '../assets/images/Natalya.webp';
 
 const BlockHero = () => {
-  const [showText, setShowText] = useState(true);
+  const [showText, setShowText] = useState(false);
   const [effect, setEffect] = useState(false);
 
   const identity = 'hero';
@@ -31,9 +31,9 @@ const BlockHero = () => {
     <>
       <div
         id="hero"
-        className="mb-4 grid bg-green-100 p-4 sm:mb-5 sm:grid-cols-3 sm:gap-5 sm:p-5 md:mb-6 md:gap-6 md:p-6 lg:mb-7 lg:gap-7 lg:p-7 xl:mb-8 xl:gap-8 xl:p-8"
+        className="grid p-4 sm:grid-cols-3 sm:gap-5 sm:p-5 md:gap-6 md:p-6 lg:gap-7 lg:p-7 xl:gap-8 xl:p-8"
       >
-        <div className="relative mb-4 sm:mb-0">
+        <div className="relative">
           <img
             src={natalya}
             alt="Natalya"
@@ -43,7 +43,7 @@ const BlockHero = () => {
         <div className="flex flex-col justify-between sm:col-span-2">
           <div className="mb-4">
             <div className="mb-4">
-              <p className="mb-4 indent-14 font-vibes text-5xl">
+              <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
                 <b>Вітаю Вас!</b>
               </p>
               <p className="indent-14">
@@ -76,8 +76,8 @@ const BlockHero = () => {
                     найкраще рішення для ваших потреб!
                   </p>
                   <br />
-                  <p className="mb-4 indent-14">
-                    <b>Вітаю вас!</b>
+                  <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
+                    <b>Вітаю Вас!</b>
                   </p>
                   <p className="indent-14">
                     Мене звати Наталя, і я підприємець компанії Forever. Два
