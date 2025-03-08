@@ -1,13 +1,7 @@
-import { useState } from 'react';
-
-import './App.css';
-
-function App() {
-	const [count, setCount] = useState(0);
-
+const App = () => {
 	return (
 		<>
-			<div className='container grid grid-cols-1 gap-16 sm:grid-cols-3 border-4 border-green-500 sm:border-yellow-500 md:border-red-500 lg:border-blue-500 xl:border-orange-500'>
+			<div className='container mx-auto my-16 grid grid-cols-1 gap-16 sm:grid-cols-3 border-4 border-green-500 sm:border-yellow-500 md:border-red-500 lg:border-blue-500 xl:border-orange-500'>
 				<div>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -42,15 +36,8 @@ function App() {
 					</p>
 				</div>
 			</div>
-			<h1 className='text-3xl font-bold underline'>Hello world!</h1>
-
-			<div className='card'>
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-			</div>
 		</>
 	);
-}
+};
 
 export default App;
