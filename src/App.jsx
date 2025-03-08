@@ -1,7 +1,7 @@
 import Container from './components/container';
-// import Top from "./components/top.jsx";
-// import Header from "./components/header.jsx";
-import HeroBlock from './components/heroBlock.jsx';
+import Top from './components/top.jsx';
+import Header from './components/header.jsx';
+import BlockHero from './components/blockHero.jsx';
 // import ShopBlock from "./components/shopBlock.jsx";
 // import ForeverBlock from "./components/foreverBlock.jsx";
 // import Footer from "./components/footer.jsx";
@@ -14,7 +14,7 @@ import HeroBlock from './components/heroBlock.jsx';
 const App = () => {
   return (
     <>
-      <div className="container mx-auto my-16 grid grid-cols-1 gap-16 sm:grid-cols-3 border-4 border-green-500 sm:border-yellow-500 md:border-red-500 lg:border-blue-500 xl:border-orange-500">
+      {/* <div className="container mx-auto my-16 grid grid-cols-1 gap-16 sm:grid-cols-3 border-4 border-green-500 sm:border-yellow-500 md:border-red-500 lg:border-blue-500 xl:border-orange-500">
         <div>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt vero
@@ -43,14 +43,14 @@ const App = () => {
             accusantium beatae.
           </p>
         </div>
-      </div>
-      {/* <Top>
+      </div> */}
+      <Top>
         <Container>
           <Header />
         </Container>
-      </Top> */}
+      </Top>
       <Container>
-        <HeroBlock />
+        <BlockHero />
         {/* <ShopBlock /> */}
         {/* <ScrollAnimation /> */}
         {/* <ScrollAnimation2 /> */}
