@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import foreverBlue from '../assets/images/foreverBlue.jpg';
-
-import { foreverLinks } from '../constants/foreverLinks.js';
+import foreverLinks from '../constants/foreverLinks.js';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);

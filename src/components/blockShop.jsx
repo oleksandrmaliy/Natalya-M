@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import shopBlue from '../assets/images/shopBlue.jpg';
+import storeBlue from '../assets/images/storeBlue.jpg';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);
@@ -87,7 +87,7 @@ const BlockShop = () => {
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
           <img
-            src={shopBlue}
+            src={storeBlue}
             alt="Store"
             className="w-full rounded-full border-8 border-white"
           />

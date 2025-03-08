@@ -1,4 +1,4 @@
-export const foreverLinks = [
+const foreverLinks = [
   {
     title: 'Головна сторінка Forever Ukraine',
     url: 'https://foreverliving.ua/uk/',
@@ -12,3 +12,5 @@ export const foreverLinks = [
     url: 'https://uk.wikipedia.org/wiki/Forever_Living_Products',
   },
 ];
+
+export default foreverLinks;
