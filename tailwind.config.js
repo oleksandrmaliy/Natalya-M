@@ -10,7 +10,7 @@ export default {
       },
       container: {
         center: 'true', // Центрує контейнер
-        padding: '1rem', // Додає внутрішні відступи
+        // padding: '1rem', // Додає внутрішні відступи
       },
       screens: {
         sm: '640px',

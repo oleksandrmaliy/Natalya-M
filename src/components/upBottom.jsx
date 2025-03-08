@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { FaChevronCircleUp } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import { FaChevronCircleUp } from 'react-icons/fa';
 
-export const ScrollToTopButton = () => {
+const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -13,15 +13,15 @@ export const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -30,11 +30,13 @@ export const ScrollToTopButton = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed right-4 bottom-4 shadow-xl"
+          className="fixed bottom-4 right-4 shadow-xl"
         >
-          <FaChevronCircleUp className="text-opacity-50 h-12 w-12 bg-transparent text-green-500/50 hover:scale-105 hover:text-green-500 active:text-green-600" />
+          <FaChevronCircleUp className="h-12 w-12 bg-transparent text-green-500/50 text-opacity-50 hover:scale-105 hover:text-green-500 active:text-green-600" />
         </button>
       )}
     </>
   );
 };
+
+export default ScrollToTopButton;

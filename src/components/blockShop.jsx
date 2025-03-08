@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-import retailStore2 from "../assets/images/retailStore2.jpg";
+import retailStore2 from '../assets/images/retailStore2.jpg';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);
@@ -12,19 +12,19 @@ const useScrollTrigger = () => {
       setTrigger((prev) => prev + 1);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return trigger;
 };
 
-const ShopBlock = () => {
+const BlockShop = () => {
   const [showText, setShowtext] = useState(false);
   const [effect, setEffect] = useState(false);
 
   const scrollTrigger = useScrollTrigger();
-  const [animationStage, setAnimationStage] = useState("normal");
+  const [animationStage, setAnimationStage] = useState('normal');
 
   // Відстежуємо, чи дів2 у вьюпорті
   const { ref, inView } = useInView({
@@ -32,13 +32,13 @@ const ShopBlock = () => {
     threshold: 0.1, // 10% блоку має бути видно
   });
 
-  const identity = "shop";
+  const identity = 'shop';
 
   useEffect(() => {
     if (effect & !showText) {
       document.getElementById(identity)?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
+        behavior: 'smooth',
+        block: 'center',
       });
     }
   }, [showText, effect]);
@@ -46,11 +46,11 @@ const ShopBlock = () => {
   useEffect(() => {
     if (!inView) return; // Запускаємо анімацію тільки якщо div2 у вьюпорті
 
-    setAnimationStage("scale-up");
+    setAnimationStage('scale-up');
 
     setTimeout(() => {
       // setAnimationStage("scale-down");
-      setAnimationStage("normal");
+      setAnimationStage('normal');
       // setTimeout(() => {
 
       // }, 300);
@@ -59,9 +59,9 @@ const ShopBlock = () => {
 
   const getScale = () => {
     switch (animationStage) {
-      case "scale-up":
+      case 'scale-up':
         return 1.1;
-      case "scale-down":
+      case 'scale-down':
         return 0.95;
       default:
         return 1;
@@ -76,15 +76,15 @@ const ShopBlock = () => {
   return (
     <div
       id="shop"
-      className="mb-4 grid grid-cols-1 bg-sky-100 p-4 sm:mb-5 sm:p-5 md:mb-6 md:grid-cols-3 md:gap-6 md:p-6 lg:mb-7 lg:gap-7 lg:p-7 xl:mb-8 xl:gap-8 xl:p-8"
+      className="mb-4 grid grid-cols-1 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:p-5 md:mb-6 md:gap-6 md:p-6 lg:mb-7 lg:gap-7 lg:p-7 xl:mb-8 xl:gap-8 xl:p-8"
       // className="mb-8 grid min-h-110 w-full grid-cols-1 border-4 border-red-500 bg-green-100 p-4 md:grid-cols-3 md:gap-8 md:p-6 lg:p-7 xl:p-8"
     >
       <div className="relative mb-4 sm:mb-5 md:mb-0">
         <motion.div
           ref={ref} // Додаємо ref для відстеження видимості
-          className="sticky top-[calc(50%-150px)] mx-auto flex h-auto w-1/2 items-center justify-center md:w-2/3"
+          className="sticky top-[calc(50%-150px)] mx-auto flex h-auto w-1/2 items-center justify-center sm:w-2/3"
           animate={{ scale: getScale() }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
           <img
             src={retailStore2}
@@ -94,7 +94,7 @@ const ShopBlock = () => {
         </motion.div>
       </div>
 
-      <div className="col-span-2 flex flex-col justify-between">
+      <div className="flex flex-col justify-between sm:col-span-2">
         <div className="mb-4">
           <div className="mb-4">
             <p className="mb-4">
@@ -119,7 +119,7 @@ const ShopBlock = () => {
                   </li>
                   <li>
                     <span className="font-medium italic">
-                      Косметика та догляд за шкірою{" "}
+                      Косметика та догляд за шкірою{' '}
                     </span>
                     – креми, лосьйони, гелі для обличчя та тіла з доглядовими
                     компонентами.
@@ -131,13 +131,13 @@ const ShopBlock = () => {
                   </li>
                   <li>
                     <span className="font-medium italic">
-                      Продукти бджільництва{" "}
+                      Продукти бджільництва{' '}
                     </span>
                     – натуральні медові продукти для енергії та імунітету.
                   </li>
                   <li>
                     <span className="font-medium italic">
-                      Програми детоксу та контролю ваги{" "}
+                      Програми детоксу та контролю ваги{' '}
                     </span>
                     – комплекси для здорового способу життя.
                   </li>
@@ -152,14 +152,14 @@ const ShopBlock = () => {
                   </li>
                   <li>
                     <span className="font-medium italic">
-                      Безпосереднє постачання{" "}
+                      Безпосереднє постачання{' '}
                     </span>
                     – товари надходять від офіційного дистриб’ютора, без
                     посередників.
                   </li>
                   <li>
                     <span className="font-medium italic">
-                      Гнучка система знижок{" "}
+                      Гнучка система знижок{' '}
                     </span>
                     – постійним клієнтам надаються спеціальні пропозиції.
                   </li>
@@ -169,7 +169,7 @@ const ShopBlock = () => {
                   </li>
                   <li>
                     <span className="font-medium italic">
-                      Персональні консультації{" "}
+                      Персональні консультації{' '}
                     </span>
                     – допомога у виборі продукції відповідно до потреб.
                   </li>
@@ -198,7 +198,7 @@ const ShopBlock = () => {
               onClick={handleClick}
               className="cursor-pointer text-blue-500"
             >
-              {showText ? "Згорнути" : "Читати більше..."}
+              {showText ? 'Згорнути' : 'Читати більше...'}
             </button>
           </div>
         </div>
@@ -220,4 +220,4 @@ const ShopBlock = () => {
   );
 };
 
-export default ShopBlock;
+export default BlockShop;

@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import { nanoid } from "nanoid";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useState, useEffect } from 'react';
+import { nanoid } from 'nanoid';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-import forever4 from "../assets/images/forever4.jpg";
+import forever4 from '../assets/images/forever4.jpg';
 
-import { foreverLinks } from "../constants/foreverLinks.js";
+import { foreverLinks } from '../constants/foreverLinks.js';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);
@@ -15,19 +15,19 @@ const useScrollTrigger = () => {
       setTrigger((prev) => prev + 1);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return trigger;
 };
 
-const ForeverBlock = () => {
+const BlockForever = () => {
   const [showText, setShowText] = useState(false);
   const [effect, setEffect] = useState(false);
 
   const scrollTrigger = useScrollTrigger();
-  const [animationStage, setAnimationStage] = useState("normal");
+  const [animationStage, setAnimationStage] = useState('normal');
 
   // Відстежуємо, чи дів2 у вьюпорті
   const { ref, inView } = useInView({
@@ -35,13 +35,13 @@ const ForeverBlock = () => {
     threshold: 0.1, // 10% блоку має бути видно
   });
 
-  const identity = "forever";
+  const identity = 'forever';
 
   useEffect(() => {
     if (effect & !showText) {
       document.getElementById(identity)?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
+        behavior: 'smooth',
+        block: 'center',
       });
     }
   }, [showText, effect]);
@@ -49,11 +49,11 @@ const ForeverBlock = () => {
   useEffect(() => {
     if (!inView) return; // Запускаємо анімацію тільки якщо div2 у вьюпорті
 
-    setAnimationStage("scale-up");
+    setAnimationStage('scale-up');
 
     setTimeout(() => {
       // setAnimationStage("scale-down");
-      setAnimationStage("normal");
+      setAnimationStage('normal');
       // setTimeout(() => {
 
       // }, 300);
@@ -62,9 +62,9 @@ const ForeverBlock = () => {
 
   const getScale = () => {
     switch (animationStage) {
-      case "scale-up":
+      case 'scale-up':
         return 1.1;
-      case "scale-down":
+      case 'scale-down':
         return 0.95;
       default:
         return 1;
@@ -79,14 +79,14 @@ const ForeverBlock = () => {
   return (
     <div
       id="forever"
-      className="mb-4 grid grid-cols-1 gap-4 bg-sky-100 p-4 sm:mb-5 sm:gap-5 sm:p-5 md:mb-6 md:grid-cols-3 md:p-6 lg:mb-7 lg:p-7 xl:mb-8 xl:p-8"
+      className="mb-4 grid grid-cols-1 gap-4 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:gap-5 sm:p-5 md:mb-6 md:p-6 lg:mb-7 lg:p-7 xl:mb-8 xl:p-8"
     >
-      <div className="relative">
+      <div className="relative mb-4 sm:mb-5 md:mb-0">
         <motion.div
-          className="sticky top-[calc(50%-150px)] mx-auto flex h-auto w-1/2 items-center justify-center md:w-2/3"
+          className="sticky top-[calc(50%-150px)] mx-auto flex h-auto w-1/2 items-center justify-center sm:w-2/3"
           ref={ref} // Додаємо ref для відстеження видимості
           animate={{ scale: getScale() }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
           <img
             src={forever4}
@@ -96,7 +96,7 @@ const ForeverBlock = () => {
         </motion.div>
       </div>
 
-      <div className="col-span-2 flex flex-col justify-between">
+      <div className="flex flex-col justify-between sm:col-span-2">
         <div className="mb-4">
           <div className="mb-4">
             <p className="mb-4">
@@ -137,7 +137,7 @@ const ForeverBlock = () => {
                   </li>
                   <li>
                     <span className="font-medium italic">
-                      Мережа дистрибуції:{" "}
+                      Мережа дистрибуції:{' '}
                     </span>
                     Понад 160 країн
                   </li>
@@ -181,7 +181,7 @@ const ForeverBlock = () => {
           </div>
           <div className="flex justify-center text-blue-500">
             <button onClick={handleClick}>
-              {showText ? "Згорнути" : "Читати більше..."}
+              {showText ? 'Згорнути' : 'Читати більше...'}
             </button>
           </div>
         </div>
@@ -212,4 +212,4 @@ const ForeverBlock = () => {
   );
 };
 
-export default ForeverBlock;
+export default BlockForever;
