@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import forever4 from '../assets/images/forever4.jpg';
+import foreverBlue from '../assets/images/foreverBlue.jpg';
 
 import { foreverLinks } from '../constants/foreverLinks.js';
 
@@ -89,7 +89,7 @@ const BlockForever = () => {
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
           <img
-            src={forever4}
+            src={foreverBlue}
             alt="Опис фото"
             className="w-full rounded-full border-8 border-white"
           />
