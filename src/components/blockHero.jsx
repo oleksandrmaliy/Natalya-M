@@ -37,7 +37,7 @@ const BlockHero = () => {
           <img
             src={natalya}
             alt="Natalya"
-            className="relative -top-11 w-2/3 rounded-full border-8 border-white shadow-all-green sm:-top-16 sm:w-full md:-top-20 lg:-top-24 xl:-top-28"
+            className="relative -top-11 w-2/3 rounded-full border-[3px] border-white shadow-all-green sm:-top-16 sm:w-full sm:border-[4px] md:-top-20 md:border-[5px] lg:-top-24 lg:border-[6px] xl:-top-28 xl:border-[7px] 2xl:border-[8px]"
           />
         </div>
         <div className="flex flex-col justify-between sm:col-span-2">

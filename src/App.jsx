@@ -23,7 +23,7 @@ const App = () => {
       </BgWrapper>
 
       <BgWrapper styles={heroBgStyles}>
-        <div className="absolute inset-0 bg-gradient-to-l from-white/80 to-white/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/50 to-white/50"></div>
         <div className="relative z-10">
           <Container>
             <BlockHero />

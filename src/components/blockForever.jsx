@@ -80,9 +80,9 @@ const BlockForever = () => {
       id="forever"
       className="mb-4 grid grid-cols-1 gap-4 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:gap-5 sm:p-5 md:mb-6 md:p-6 lg:mb-7 lg:p-7 xl:mb-8 xl:p-8"
     >
-      <div className="relative mb-4 sm:mb-5 md:mb-0">
+      <div className="relative mb-4 sm:mb-0">
         <motion.div
-          className="sticky top-[calc(50%-150px)] mx-auto flex h-auto w-1/2 items-center justify-center sm:w-2/3"
+          className="sticky top-[calc(50%-45px)] mx-auto flex h-auto w-1/2 items-center justify-center sm:top-[calc(50%-62px)] sm:w-2/3 md:top-[calc(50%-75px)] lg:top-[calc(50%-101px)] xl:top-[calc(50%-128px)] 2xl:top-[calc(50%-156px)]"
           ref={ref} // Додаємо ref для відстеження видимості
           animate={{ scale: getScale() }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -90,7 +90,7 @@ const BlockForever = () => {
           <img
             src={foreverBlue}
             alt="Опис фото"
-            className="w-full rounded-full border-8 border-white"
+            className="w-full rounded-full border-[3px] border-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
           />
         </motion.div>
       </div>
