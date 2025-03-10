@@ -113,7 +113,7 @@ const BlockHero = () => {
           <div className="mt-auto">
             <button
               onClick={scrollToFooter}
-              className="flex w-full items-center bg-greencolor/90 p-4 hover:bg-redcolor"
+              className="flex w-full items-center border-[3px] border-white bg-greencolor/90 p-4 hover:bg-redcolor sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
             >
               <p className="flex h-full w-full items-center justify-center text-center text-white">
                 Зв&apos;яжіться зі мною

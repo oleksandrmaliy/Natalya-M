@@ -190,7 +190,7 @@ const BlockForever = () => {
             {foreverLinks.map(({ title, url }) => (
               <li
                 key={nanoid()}
-                className="bg-bluecolor p-4 hover:bg-redcolor hover:text-white"
+                className="border-[3px] border-white bg-bluecolor p-4 hover:bg-redcolor hover:text-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
               >
                 <a
                   href={url}
