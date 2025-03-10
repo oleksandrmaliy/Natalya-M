@@ -208,7 +208,7 @@ const BlockShop = () => {
             href="https://380500014529.flpuretail.com/uk/"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            className="flex items-center gap-4 border-[3px] border-white bg-bluecolor p-4 hover:bg-redcolor hover:text-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
+            className="flex items-center gap-4 border-[3px] border-transparent bg-bluecolor p-4 hover:bg-redcolor hover:text-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
           >
             <p className="flex h-full w-full items-center justify-center text-center">
               Перейти до магазину
