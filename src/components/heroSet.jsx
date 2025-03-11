@@ -6,7 +6,7 @@ const HeroSet = () => {
   return (
     <BgWrapper
       styles={
-        'relative bg-[url("../public/bghero.jpeg")] bg-cover bg-center mb-4 bg-green-100 sm:mb-5 md:mb-6 lg:mb-7 xl:mb-8'
+        'relative bg-[url("/bghero.jpeg")] bg-cover bg-center mb-4 bg-green-100 sm:mb-5 md:mb-6 lg:mb-7 xl:mb-8'
       }
     >
       <div className="absolute inset-0 bg-gradient-to-r from-white/50 to-white/50"></div>
