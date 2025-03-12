@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet';
+
 import Container from './components/container';
 import BgWrapper from './components/bgWrapper.jsx';
 import Header from './components/header.jsx';
@@ -15,6 +17,12 @@ const footerBgStyles = 'w-full bg-greencolor';
 const App = () => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Title</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+
       <BgWrapper styles={headerBgStyles}>
         <Container>
           <Header />
@@ -29,9 +37,9 @@ const App = () => {
       </Container>
 
       <BgWrapper styles={footerBgStyles}>
-        {/* <Container> */}
-        <Footer />
-        {/* </Container> */}
+        <Container>
+          <Footer />
+        </Container>
       </BgWrapper>
 
       <ScrollToTopButton />
