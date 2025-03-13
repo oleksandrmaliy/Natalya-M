@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import { Suspense } from 'react';
 
 import Container from './components/container';
 import BgWrapper from './components/bgWrapper.jsx';
@@ -53,26 +54,28 @@ const App = () => {
         <link rel="canonical" href="https://natalya-m.vercel.app/" />
       </Helmet>
 
-      <BgWrapper styles={headerBgStyles}>
+      <Suspense>
+        <BgWrapper styles={headerBgStyles}>
+          <Container>
+            <Header />
+          </Container>
+        </BgWrapper>
+
+        <HeroSet />
+
         <Container>
-          <Header />
+          <BlockShop />
+          <BlockForever />
         </Container>
-      </BgWrapper>
 
-      <HeroSet />
+        <BgWrapper styles={footerBgStyles}>
+          <Container>
+            <Footer />
+          </Container>
+        </BgWrapper>
 
-      <Container>
-        <BlockShop />
-        <BlockForever />
-      </Container>
-
-      <BgWrapper styles={footerBgStyles}>
-        <Container>
-          <Footer />
-        </Container>
-      </BgWrapper>
-
-      <ScrollToTopButton />
+        <ScrollToTopButton />
+      </Suspense>
     </>
   );
 };
