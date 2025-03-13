@@ -13,18 +13,18 @@ const Contacts = () => {
   return (
     <div className="flex justify-center">
       <div className="mx-auto grid grid-cols-4 gap-4 sm:grid-cols-8 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
-        <a href="tel:+380509967575">
+        <a href="tel:+380509535273">
           <FiPhoneCall className={iconStyle} />
         </a>
         <a
-          href="https://t.me/+380509967575"
+          href="https://t.me/+380509535273"
           target="_blank"
           rel="noopener noreferrer"
         >
           <RiTelegramLine className={iconStyle} />
         </a>
         <a
-          href="https://wa.me/380509967575?text=Привіт!"
+          href="https://wa.me/380509535273?text=Привіт!"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -41,7 +41,7 @@ const Contacts = () => {
           <AiOutlineFacebook className={iconStyle} />
         </a>
         <a
-          href="viber://chat?number=%2B380509967575"
+          href="viber://chat?number=%2B380509535273"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -50,7 +50,7 @@ const Contacts = () => {
         <a href="https://www.instagram.com/natasha.maliy1/" target="_blank">
           <FaInstagram className={iconStyle} />
         </a>
-        <a href="mailto:user@gmail.com?subject=Замовлення%20продукції%20Форевер&body=Вітаю,%20Наталі!">
+        <a href="mailto:maliyyilam1@gmail.com?subject=Замовлення%20продукції%20Форевер&body=Вітаю,%20Наталі!">
           <MdAlternateEmail className={iconStyle} />
         </a>
       </div>
