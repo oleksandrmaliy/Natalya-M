@@ -89,6 +89,7 @@ const BlockForever = () => {
         >
           <img
             src={foreverBlue}
+            loading="lazy"
             alt="Опис фото"
             className="aspect-square w-full rounded-full border-[3px] border-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
           />
