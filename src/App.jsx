@@ -40,8 +40,15 @@ const App = () => {
         />
         <meta
           property="og:image"
-          content="https://natalya-m.vercel.app/public/ogImg.jpg"
+          content="https://natalya-m.vercel.app/ogImg.jpg"
         />
+        <meta
+          property="og:image:secure_url"
+          content="https://natalya-m.vercel.app/ogImg.jpg"
+        />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="837" />
         <meta property="og:url" content="https://natalya-m.vercel.app/" />
         <link rel="canonical" href="https://natalya-m.vercel.app/" />
       </Helmet>
