@@ -18,7 +18,7 @@ const App = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Купити продукцію Форевер | Forever Living Products</title>
+        <title>Natalya M</title>
         <meta
           name="description"
           content="Купити продукцію Форевер від Forever Living Products. Натуральні продукти на основі алое вера для здоров'я, краси та гарного самопочуття."
@@ -38,7 +38,10 @@ const App = () => {
           property="og:description"
           content="Замовляйте якісні продукти Forever Living на основі алое вера. Натуральні рішення для краси, здоров'я та гарного самопочуття."
         />
-        <meta property="og:image" content="URL_до_зображення" />
+        <meta
+          property="og:image"
+          content="https://natalya-m.vercel.app/public/ogImg.jpg"
+        />
         <meta property="og:url" content="https://natalya-m.vercel.app/" />
         <link rel="canonical" href="https://natalya-m.vercel.app/" />
       </Helmet>
