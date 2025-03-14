@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import { Suspense } from 'react';
+// import { Suspense } from 'react';
 
 import Container from './components/container';
 import BgWrapper from './components/bgWrapper.jsx';
@@ -30,7 +30,7 @@ const App = () => {
           content="Купити продукцію Форевер, Forever Living, алое вера, натуральні добавки, здорове харчування, догляд за шкірою, вітаміни, косметика"
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
+        {/* <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="Купити продукцію Форевер | Forever Living Products"
@@ -50,32 +50,32 @@ const App = () => {
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1600" />
         <meta property="og:image:height" content="837" />
-        <meta property="og:url" content="https://natalya-m.vercel.app/" />
+        <meta property="og:url" content="https://natalya-m.vercel.app/" /> */}
         <link rel="canonical" href="https://natalya-m.vercel.app/" />
       </Helmet>
 
-      <Suspense>
-        <BgWrapper styles={headerBgStyles}>
-          <Container>
-            <Header />
-          </Container>
-        </BgWrapper>
-
-        <HeroSet />
-
+      {/* <Suspense> */}
+      <BgWrapper styles={headerBgStyles}>
         <Container>
-          <BlockShop />
-          <BlockForever />
+          <Header />
         </Container>
+      </BgWrapper>
 
-        <BgWrapper styles={footerBgStyles}>
-          <Container>
-            <Footer />
-          </Container>
-        </BgWrapper>
+      <HeroSet />
 
-        <ScrollToTopButton />
-      </Suspense>
+      <Container>
+        <BlockShop />
+        <BlockForever />
+      </Container>
+
+      <BgWrapper styles={footerBgStyles}>
+        <Container>
+          <Footer />
+        </Container>
+      </BgWrapper>
+
+      <ScrollToTopButton />
+      {/* </Suspense> */}
     </>
   );
 };
