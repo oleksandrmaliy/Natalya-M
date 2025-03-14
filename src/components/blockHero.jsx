@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 import natalya from '../assets/images/Natalya.webp';
 
@@ -44,16 +44,16 @@ const BlockHero = () => {
         <div className="flex flex-col justify-between sm:col-span-2">
           <div className="mb-4">
             <div className="mb-4">
-              <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
-                <b>Вітаю Вас!</b>
-              </p>
-              <p className="indent-14">
-                Мене звати Наталя, і я – підприємець компанії Forever. Два роки
-                тому я зробила важливий вибір – розпочати власну справу, яка не
-                лише приносить дохід, а й наповнює моє життя сенсом та свободою.
-              </p>
-              {/* {showText && ( */}
               <div>
+                <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
+                  <b>Вітаю Вас!</b>
+                </p>
+                <p className="indent-14">
+                  Мене звати Наталя, і я – підприємець компанії Forever. Два
+                  роки тому я зробила важливий вибір – розпочати власну справу,
+                  яка не лише приносить дохід, а й наповнює моє життя сенсом та
+                  свободою.
+                </p>
                 <p className="indent-14">
                   Коли я вперше познайомилася з продукцією Forever, мене вразила
                   її якість і натуральний склад. Я зрозуміла, що хочу не просто
@@ -76,6 +76,8 @@ const BlockHero = () => {
                   найкраще рішення для ваших потреб!
                 </p>
                 <br />
+              </div>
+              <div>
                 <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
                   <b>Вітаю Вас!</b>
                 </p>
@@ -99,7 +101,6 @@ const BlockHero = () => {
                   запитання та допомогти з вибором.
                 </p>
               </div>
-              {/* )} */}
             </div>
             {/* <div className="flex justify-center">
               <button
