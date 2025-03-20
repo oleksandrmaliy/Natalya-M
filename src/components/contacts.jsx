@@ -12,19 +12,12 @@ import { RiMailSendLine } from 'react-icons/ri';
 
 const Contacts = () => {
   const iconStyle =
-    'size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18 text-white';
+    'size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18 text-white hover:transition-transform hover:ease-in-out hover:duration-300 hover:scale-110';
   return (
-    <div className="flex justify-center">
-      <div className="mx-auto grid grid-cols-4 gap-4 sm:grid-cols-8 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
+    <div className="mx-auto flex justify-center">
+      <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
         <a href="tel:+380509535273">
           <FiPhoneCall className={iconStyle} />
-        </a>
-        <a
-          href="viber://chat?number=%2B380509535273"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaViber className={iconStyle} />
         </a>
         <a
           href="https://t.me/+380509535273"
@@ -41,7 +34,14 @@ const Contacts = () => {
           <FaWhatsapp className={iconStyle} />
         </a>
         <a
-          href="https://m.me/natasha.maliy1"
+          href="viber://chat?number=%2B380509535273"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaViber className={iconStyle} />
+        </a>
+        <a
+          href="https://www.messenger.com/t/natasha.maliy1"
           target="_blank"
           rel="noopener noreferrer"
         >
