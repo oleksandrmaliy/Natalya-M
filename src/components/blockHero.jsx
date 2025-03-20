@@ -44,7 +44,7 @@ const BlockHero = () => {
         <div className="flex flex-col justify-between sm:col-span-2">
           <div className="mb-4">
             <div className="mb-4">
-              <div className="hidden">
+              <div className="">
                 <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
                   <b>Вітаю Вас!</b>
                 </p>
