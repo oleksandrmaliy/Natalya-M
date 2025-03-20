@@ -99,9 +99,9 @@ const BlockForever = () => {
       <div className="flex flex-col justify-between sm:col-span-2">
         <div className="mb-4">
           <div className="mb-4">
-            <p className="mb-4">
-              <b>Forever Living Products</b>
-            </p>
+            <h3 className="mb-4 text-lg font-semibold leading-tight tracking-tight sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
+              Forever Living Products
+            </h3>
             <p className="mb-4">
               Forever Living Products – це американська компанія, заснована у
               1978 році в місті Скоттсдейл, штат Аризона, і є міжнародним
@@ -187,11 +187,11 @@ const BlockForever = () => {
         </div>
 
         <div className="mt-auto">
-          <ul className="grid grid-cols-1 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:grid-cols-3 xl:gap-8">
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {foreverLinks.map(({ title, url }) => (
               <li
                 key={nanoid()}
-                className="border-[3px] border-transparent bg-bluecolor p-4 hover:bg-redcolor hover:text-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
+                className="rounded-xl bg-bluecolor p-2 hover:bg-redcolor hover:text-white lg:px-6 xl:px-2"
               >
                 <a
                   href={url}

@@ -12,7 +12,7 @@ import { RiMailSendLine } from 'react-icons/ri';
 
 const Contacts = () => {
   const iconStyle =
-    'size-10 sm:size-12 md:size-14 lg:size-16 xl:size-18 text-white hover:transition-transform hover:ease-in-out hover:duration-300 hover:scale-110';
+    'size-8 sm:size-8 md:size-8 lg:size-8 xl:size-10 text-white hover:transition-transform hover:ease-in-out hover:duration-300 hover:scale-110';
   return (
     <div className="mx-auto flex justify-center">
       <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">

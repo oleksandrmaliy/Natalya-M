@@ -45,38 +45,69 @@ const BlockHero = () => {
           <div className="mb-4">
             <div className="mb-4">
               <div className="">
-                <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
-                  <b>Вітаю Вас!</b>
-                </p>
-                <p className="indent-14">
+                {/* <h3 className="mb-4 indent-14 font-vibes text-3xl leading-tight tracking-tight sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
+                  Вітаю Вас!
+                </h3>
+                <p className="mb-1 indent-14">
                   Мене звати Наталя, і я – підприємець компанії Forever Living
                   Products. Познайомившись із цією компанією та спробувавши її
                   продукцію, я зробила важливий вибір – розпочати власну справу,
                   що не лише приносить дохід, а й наповнює моє життя сенсом і
                   свободою.
                 </p>
-                <p className="indent-14">
+                <p className="mb-1 indent-14">
                   Коли я вперше познайомилася з продукцією Forever, мене вразила
                   її якість і натуральний склад. Я зрозуміла, що хочу не просто
                   користуватися нею сама, а й ділитися цими унікальними
                   продуктами з іншими. Так і почався мій шлях у бізнесі, який
                   відкрив переді мною безліч можливостей.
                 </p>
-                <p className="indent-14">
+                <p className="mb-1 indent-14">
                   Сьогодні я з упевненістю можу сказати, що Forever – це більше,
                   ніж просто продукція. Це стиль життя, це можливість
                   піклуватися про своє здоров’я, виглядати чудово та почуватися
                   енергійною кожного дня. Крім того, це шанс для кожного, хто
                   хоче змінити своє життя та знайти фінансову незалежність.
                 </p>
-                <p className="indent-14">
+                <p className="mb-1 indent-14">
                   Якщо ви хочете спробувати якісну продукцію Forever або
                   дізнатися більше про можливості, які вона відкриває, буду рада
                   допомогти вам підібрати ідеальний варіант саме для вас.
                   Напишіть мені – з радістю поділюся своїм досвідом та підкажу
                   найкраще рішення для ваших потреб!
                 </p>
-                <br />
+                <br /> */}
+                <h3 className="mb-4 text-lg font-semibold leading-tight tracking-tight sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
+                  Вітаю Вас!
+                </h3>
+                <p className="mb-2">
+                  Мене звати Наталя, і я – підприємець компанії Forever Living
+                  Products. Познайомившись із цією компанією та спробувавши її
+                  продукцію, я зробила важливий вибір – розпочати власну справу,
+                  що не лише приносить дохід, а й наповнює моє життя сенсом і
+                  свободою.
+                </p>
+                <p className="mb-2">
+                  Коли я вперше познайомилася з продукцією Forever, мене вразила
+                  її якість і натуральний склад. Я зрозуміла, що хочу не просто
+                  користуватися нею сама, а й ділитися цими унікальними
+                  продуктами з іншими. Так і почався мій шлях у бізнесі, який
+                  відкрив переді мною безліч можливостей.
+                </p>
+                <p className="mb-2">
+                  Сьогодні я з упевненістю можу сказати, що Forever – це більше,
+                  ніж просто продукція. Це стиль життя, це можливість
+                  піклуватися про своє здоров’я, виглядати чудово та почуватися
+                  енергійною кожного дня. Крім того, це шанс для кожного, хто
+                  хоче змінити своє життя та знайти фінансову незалежність.
+                </p>
+                <p className="mb-2">
+                  Якщо ви хочете спробувати якісну продукцію Forever або
+                  дізнатися більше про можливості, які вона відкриває, буду рада
+                  допомогти вам підібрати ідеальний варіант саме для вас.
+                  Напишіть мені – з радістю поділюся своїм досвідом та підкажу
+                  найкраще рішення для ваших потреб!
+                </p>
               </div>
               {/* <div>
                 <p className="indent-14 font-vibes text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
@@ -115,10 +146,10 @@ const BlockHero = () => {
           <div className="mt-auto">
             <button
               onClick={scrollToFooter}
-              className="flex w-full items-center border-[3px] border-transparent bg-greencolor/90 p-4 hover:bg-redcolor sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
+              className="flex w-full items-center rounded-xl bg-greencolor/90 p-2 hover:bg-redcolor sm:w-1/2 md:w-1/3"
             >
               <p className="flex h-full w-full items-center justify-center text-center text-white">
-                Зв&apos;яжіться зі мною
+                Контакти
               </p>
             </button>
           </div>

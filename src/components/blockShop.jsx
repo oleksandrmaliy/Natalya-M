@@ -98,9 +98,9 @@ const BlockShop = () => {
       <div className="flex flex-col justify-between sm:col-span-2">
         <div className="mb-4">
           <div className="mb-4">
-            <p className="mb-4">
-              <b>Онлайн магазин роздрібної торгівлі</b>
-            </p>
+            <h3 className="mb-4 text-lg font-semibold leading-tight tracking-tight sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
+              Онлайн магазин роздрібної торгівлі
+            </h3>
             <p className="mb-4">
               Forever Living Products – це міжнародний бренд, що спеціалізується
               на виробництві та продажу натуральних продуктів, які допомагають
