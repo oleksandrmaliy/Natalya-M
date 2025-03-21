@@ -29,7 +29,7 @@ const BlockHero = () => {
 
   return (
     <>
-      <main
+      <section
         id="hero"
         className="grid p-4 sm:grid-cols-3 sm:gap-5 sm:p-5 md:gap-6 md:p-6 lg:gap-7 lg:p-7 xl:gap-8 xl:p-8"
       >
@@ -85,7 +85,7 @@ const BlockHero = () => {
             </button>
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 };

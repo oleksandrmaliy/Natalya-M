@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-// import { Suspense } from 'react';
+import { Suspense } from 'react';
 
 import Container from './components/container';
 import BgWrapper from './components/bgWrapper.jsx';
@@ -19,7 +19,7 @@ const App = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Natalya M</title>
+        <title>Pani Natalya</title>
         <meta
           name="description"
           content="Купити продукцію Форевер від Forever Living Products. Натуральні продукти на основі алое вера для здоров'я, краси та гарного самопочуття."
@@ -41,11 +41,11 @@ const App = () => {
         />
         <meta
           property="og:image"
-          content="https://natalya-m.vercel.app/ogImg.jpg"
+          content="https://natalya-m.vercel.app/paniNatalya.jpg"
         />
         <meta
           property="og:image:secure_url"
-          content="https://natalya-m.vercel.app/ogImg.jpg"
+          content="https://natalya-m.vercel.app/paniNatalya.jpg"
         />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1600" />
@@ -54,29 +54,29 @@ const App = () => {
         <link rel="canonical" href="https://natalya-m.vercel.app/" />
       </Helmet>
 
-      {/* <Suspense> */}
-      <BgWrapper styles={headerBgStyles}>
-        <Container>
-          <Header />
-        </Container>
-      </BgWrapper>
+      <Suspense>
+        <BgWrapper styles={headerBgStyles}>
+          <Container>
+            <Header />
+          </Container>
+        </BgWrapper>
 
-      <main>
-        <HeroSet />
-        <Container>
-          <BlockShop />
-          <BlockForever />
-        </Container>
-      </main>
+        <main>
+          <HeroSet />
+          <Container>
+            <BlockShop />
+            <BlockForever />
+          </Container>
+        </main>
 
-      <BgWrapper styles={footerBgStyles}>
-        <Container>
-          <Footer />
-        </Container>
-      </BgWrapper>
+        <BgWrapper styles={footerBgStyles}>
+          <Container>
+            <Footer />
+          </Container>
+        </BgWrapper>
 
-      <ScrollToTopButton />
-      {/* </Suspense> */}
+        <ScrollToTopButton />
+      </Suspense>
     </>
   );
 };

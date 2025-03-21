@@ -180,10 +180,15 @@ const BlockForever = () => {
               </div>
             )}
           </div>
-          <div className="flex justify-center text-xs text-blue-500 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base">
-            <button onClick={handleClick}>
-              {showText ? 'Згорнути' : 'Читати більше...'}
-            </button>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="flex justify-center">
+              <button
+                onClick={handleClick}
+                className="cursor-pointer text-xs text-blue-500 hover:text-blue-800 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base"
+              >
+                {showText ? 'Згорнути' : 'Читати більше'}
+              </button>
+            </div>
           </div>
         </div>
 
