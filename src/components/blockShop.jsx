@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import storeBlue from '../assets/images/storeBlue.jpg';
 import LinkButton from './linkButton';
+
+import storeBlue from '../assets/images/storeBlue.jpg';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);
@@ -27,10 +28,9 @@ const BlockShop = () => {
   const scrollTrigger = useScrollTrigger();
   const [animationStage, setAnimationStage] = useState('normal');
 
-  // Відстежуємо, чи дів2 у вьюпорті
   const { ref, inView } = useInView({
-    triggerOnce: false, // Завжди відстежуємо видимість
-    threshold: 0.1, // 10% блоку має бути видно
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
   const identity = 'shop';
@@ -45,16 +45,12 @@ const BlockShop = () => {
   }, [showText, effect]);
 
   useEffect(() => {
-    if (!inView) return; // Запускаємо анімацію тільки якщо div2 у вьюпорті
+    if (!inView) return;
 
     setAnimationStage('scale-up');
 
     setTimeout(() => {
-      // setAnimationStage("scale-down");
       setAnimationStage('normal');
-      // setTimeout(() => {
-
-      // }, 300);
     }, 300);
   }, [scrollTrigger, inView]);
 
@@ -62,8 +58,6 @@ const BlockShop = () => {
     switch (animationStage) {
       case 'scale-up':
         return 1.1;
-      case 'scale-down':
-        return 0.95;
       default:
         return 1;
     }
@@ -78,12 +72,11 @@ const BlockShop = () => {
     <section
       id="shop"
       className="mb-4 grid grid-cols-1 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:p-5 md:mb-6 md:gap-6 md:p-6 lg:mb-7 lg:gap-7 lg:p-7 xl:mb-8 xl:gap-8 xl:p-8"
-      // className="mb-8 grid min-h-110 w-full grid-cols-1 border-4 border-red-500 bg-green-100 p-4 md:grid-cols-3 md:gap-8 md:p-6 lg:p-7 xl:p-8"
     >
       <div className="relative mb-4 sm:mb-0">
         <motion.div
-          ref={ref} // Додаємо ref для відстеження видимості
           className="sticky top-[calc(50%-45px)] mx-auto flex h-auto w-1/2 items-center justify-center sm:top-[calc(50%-62px)] sm:w-2/3 md:top-[calc(50%-75px)] lg:top-[calc(50%-101px)] xl:top-[calc(50%-128px)] 2xl:top-[calc(50%-156px)]"
+          ref={ref}
           animate={{ scale: getScale() }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
@@ -115,30 +108,28 @@ const BlockShop = () => {
                 </p>
                 <ul className="mb-4">
                   <li>
-                    <span className="font-medium italic">Гелі алое вера </span>–
+                    <span className="font-medium">Гелі алое вера </span>–
                     натуральні напої для зміцнення імунітету та покращення
                     травлення.
                   </li>
                   <li>
-                    <span className="font-medium italic">
+                    <span className="font-medium">
                       Косметика та догляд за шкірою{' '}
                     </span>
                     – креми, лосьйони, гелі для обличчя та тіла з доглядовими
                     компонентами.
                   </li>
                   <li>
-                    <span className="font-medium italic">Харчові добавки </span>
-                    – вітаміни, мінерали та біологічно активні речовини для
+                    <span className="font-medium">Харчові добавки </span>–
+                    вітаміни, мінерали та біологічно активні речовини для
                     підтримки організму.
                   </li>
                   <li>
-                    <span className="font-medium italic">
-                      Продукти бджільництва{' '}
-                    </span>
-                    – натуральні медові продукти для енергії та імунітету.
+                    <span className="font-medium">Продукти бджільництва </span>–
+                    натуральні медові продукти для енергії та імунітету.
                   </li>
                   <li>
-                    <span className="font-medium italic">
+                    <span className="font-medium">
                       Програми детоксу та контролю ваги{' '}
                     </span>
                     – комплекси для здорового способу життя.
@@ -149,28 +140,26 @@ const BlockShop = () => {
                 </p>
                 <ul className="mb-4">
                   <li>
-                    <span className="font-medium italic">Гарантія якості </span>
-                    – продукція сертифікована та має високу якість.
+                    <span className="font-medium">Гарантія якості </span>–
+                    продукція сертифікована та має високу якість.
                   </li>
                   <li>
-                    <span className="font-medium italic">
+                    <span className="font-medium">
                       Безпосереднє постачання{' '}
                     </span>
                     – товари надходять від офіційного дистриб’ютора, без
                     посередників.
                   </li>
                   <li>
-                    <span className="font-medium italic">
-                      Гнучка система знижок{' '}
-                    </span>
-                    – постійним клієнтам надаються спеціальні пропозиції.
+                    <span className="font-medium">Гнучка система знижок </span>–
+                    постійним клієнтам надаються спеціальні пропозиції.
                   </li>
                   <li>
-                    <span className="font-medium italic">Швидка доставка </span>
-                    – оперативна обробка замовлень і відправка по всій країні.
+                    <span className="font-medium">Швидка доставка </span>–
+                    оперативна обробка замовлень і відправка по всій країні.
                   </li>
                   <li>
-                    <span className="font-medium italic">
+                    <span className="font-medium">
                       Персональні консультації{' '}
                     </span>
                     – допомога у виборі продукції відповідно до потреб.
@@ -188,7 +177,7 @@ const BlockShop = () => {
                     натуральних компонентів!
                   </li>
                 </ul>
-                <p>
+                <p className="font-medium">
                   Залишайтесь здоровими та красивими разом із Forever Living
                   Products!
                 </p>
@@ -199,7 +188,7 @@ const BlockShop = () => {
             <div className="flex justify-center">
               <button
                 onClick={handleClick}
-                className="cursor-pointer text-xs text-blue-500 hover:text-blue-800 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base"
+                className="cursor-pointer text-xs font-medium text-blue-500 hover:text-blue-800 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base"
               >
                 {showText ? 'Згорнути' : 'Читати більше'}
               </button>
@@ -207,7 +196,7 @@ const BlockShop = () => {
           </div>
         </div>
 
-        <div className="mt-auto grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="mt-auto grid grid-cols-1 gap-4 sm:grid-cols-2">
           <LinkButton
             link={'https://380500014529.flpuretail.com/uk/'}
             title={'Перейти до магазину'}

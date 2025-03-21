@@ -1,27 +1,6 @@
-// import { useState, useEffect } from 'react';
-
 import natalya from '../assets/images/Natalya.webp';
 
 const BlockHero = () => {
-  // const [showText, setShowText] = useState(false);
-  // const [effect, setEffect] = useState(false);
-
-  // const identity = 'hero';
-
-  // useEffect(() => {
-  //   if (effect & !showText) {
-  //     document.getElementById(identity)?.scrollIntoView({
-  //       behavior: 'smooth',
-  //       block: 'center',
-  //     });
-  //   }
-  // }, [effect, showText]);
-
-  // const handleClick = () => {
-  //   setShowText(!showText);
-  //   setEffect(true);
-  // };
-
   const scrollToFooter = () => {
     const footer = document.getElementById('footer');
     footer?.scrollIntoView({ behavior: 'smooth' });
@@ -74,12 +53,12 @@ const BlockHero = () => {
               ваших потреб!
             </p>
           </div>
-          <div className="mt-auto grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="mt-auto grid grid-cols-1 gap-4 sm:grid-cols-2">
             <button
               onClick={scrollToFooter}
               className="flex w-full items-center rounded-xl bg-greencolor/90 p-2 hover:bg-redcolor"
             >
-              <p className="flex h-full w-full items-center justify-center text-center text-xs text-white sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base">
+              <p className="flex h-full w-full items-center justify-center text-center text-xs font-bold text-white sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base">
                 Контакти
               </p>
             </button>

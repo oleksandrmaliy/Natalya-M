@@ -3,9 +3,10 @@ import { nanoid } from 'nanoid';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import foreverBlue from '../assets/images/foreverBlue.jpg';
-import foreverLinks from '../constants/foreverLinks.js';
 import LinkButton from './linkButton.jsx';
+import foreverLinks from '../constants/foreverLinks.js';
+
+import foreverBlue from '../assets/images/foreverBlue.jpg';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);
@@ -23,19 +24,18 @@ const useScrollTrigger = () => {
 };
 
 const BlockForever = () => {
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowtext] = useState(false);
   const [effect, setEffect] = useState(false);
 
   const scrollTrigger = useScrollTrigger();
   const [animationStage, setAnimationStage] = useState('normal');
 
-  // Відстежуємо, чи дів2 у вьюпорті
   const { ref, inView } = useInView({
-    triggerOnce: false, // Завжди відстежуємо видимість
-    threshold: 0.1, // 10% блоку має бути видно
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
-  const identity = 'forever';
+  const identity = 'shop';
 
   useEffect(() => {
     if (effect & !showText) {
@@ -47,16 +47,12 @@ const BlockForever = () => {
   }, [showText, effect]);
 
   useEffect(() => {
-    if (!inView) return; // Запускаємо анімацію тільки якщо div2 у вьюпорті
+    if (!inView) return;
 
     setAnimationStage('scale-up');
 
     setTimeout(() => {
-      // setAnimationStage("scale-down");
       setAnimationStage('normal');
-      // setTimeout(() => {
-
-      // }, 300);
     }, 300);
   }, [scrollTrigger, inView]);
 
@@ -64,34 +60,32 @@ const BlockForever = () => {
     switch (animationStage) {
       case 'scale-up':
         return 1.1;
-      case 'scale-down':
-        return 0.95;
       default:
         return 1;
     }
   };
 
   const handleClick = () => {
-    setShowText(!showText);
+    setShowtext(!showText);
     setEffect(true);
   };
 
   return (
     <section
       id="forever"
-      className="mb-4 grid grid-cols-1 gap-4 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:gap-5 sm:p-5 md:mb-6 md:p-6 lg:mb-7 lg:p-7 xl:mb-8 xl:p-8"
+      className="mb-4 grid grid-cols-1 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:p-5 md:mb-6 md:gap-6 md:p-6 lg:mb-7 lg:gap-7 lg:p-7 xl:mb-8 xl:gap-8 xl:p-8"
     >
       <div className="relative mb-4 sm:mb-0">
         <motion.div
           className="sticky top-[calc(50%-45px)] mx-auto flex h-auto w-1/2 items-center justify-center sm:top-[calc(50%-62px)] sm:w-2/3 md:top-[calc(50%-75px)] lg:top-[calc(50%-101px)] xl:top-[calc(50%-128px)] 2xl:top-[calc(50%-156px)]"
-          ref={ref} // Додаємо ref для відстеження видимості
+          ref={ref}
           animate={{ scale: getScale() }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
           <img
             src={foreverBlue}
             loading="lazy"
-            alt="Опис фото"
+            alt="Store"
             className="aspect-square w-full rounded-full border-[3px] border-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
           />
         </motion.div>
@@ -108,7 +102,6 @@ const BlockForever = () => {
               1978 році в місті Скоттсдейл, штат Аризона, і є міжнародним
               лідером у виробництві продукції для здоров’я на основі алое вера.
             </p>
-
             {showText && (
               <div>
                 <p>
@@ -116,30 +109,28 @@ const BlockForever = () => {
                 </p>
                 <ul className="mb-4">
                   <li>
-                    <span className="font-medium italic">Рік заснування: </span>
+                    <span className="font-medium">Рік заснування: </span>
                     1978
                   </li>
                   <li>
-                    <span className="font-medium italic">Засновник: </span>Рекс
-                    Моан (Rex Maughan)
+                    <span className="font-medium">Засновник: </span>Рекс Моан
+                    (Rex Maughan)
                   </li>
                   <li>
-                    <span className="font-medium italic">Штаб-квартира: </span>
+                    <span className="font-medium">Штаб-квартира: </span>
                     Скоттсдейл, Аризона, США
                   </li>
                   <li>
-                    <span className="font-medium italic">Діяльність: </span>
+                    <span className="font-medium">Діяльність: </span>
                     Виробництво та продаж продукції для здоров’я та краси
                   </li>
                   <li>
-                    <span className="font-medium italic">Продукція: </span>
+                    <span className="font-medium">Продукція: </span>
                     Напої з алое вера, біологічно активні добавки, косметика,
                     продукти бджільництва
                   </li>
                   <li>
-                    <span className="font-medium italic">
-                      Мережа дистрибуції:{' '}
-                    </span>
+                    <span className="font-medium">Мережа дистрибуції: </span>
                     Понад 160 країн
                   </li>
                 </ul>
@@ -148,14 +139,12 @@ const BlockForever = () => {
                   <b> Основні принципи компанії: </b>
                 </p>
                 <ul className="mb-4">
-                  <li className="font-medium italic">
-                    Висока якість продукції
-                  </li>
-                  <li className="font-medium italic">Природні компоненти</li>
-                  <li className="font-medium italic">
+                  <li className="font-medium">Висока якість продукції</li>
+                  <li className="font-medium">Природні компоненти</li>
+                  <li className="font-medium">
                     Інноваційні технології виробництва
                   </li>
-                  <li className="font-medium italic">
+                  <li className="font-medium">
                     Глобальна екологічна відповідальність
                   </li>
                 </ul>
@@ -184,7 +173,7 @@ const BlockForever = () => {
             <div className="flex justify-center">
               <button
                 onClick={handleClick}
-                className="cursor-pointer text-xs text-blue-500 hover:text-blue-800 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base"
+                className="cursor-pointer text-xs font-medium text-blue-500 hover:text-blue-800 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base"
               >
                 {showText ? 'Згорнути' : 'Читати більше'}
               </button>
@@ -193,22 +182,12 @@ const BlockForever = () => {
         </div>
 
         <div className="mt-auto">
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {foreverLinks.map(({ title, url }) => (
               <li
                 key={nanoid()}
                 className="rounded-xl bg-bluecolor hover:bg-redcolor hover:text-white"
               >
-                {/* <a
-                  href={url}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  className="flex items-center"
-                >
-                  <p className="flex h-full w-full items-center justify-center text-center">
-                    {title}
-                  </p>
-                </a> */}
                 <LinkButton title={title} link={url} />
               </li>
             ))}
