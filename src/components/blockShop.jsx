@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import storeBlue from '../assets/images/storeBlue.jpg';
+import LinkButton from './linkButton';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);
@@ -74,7 +75,7 @@ const BlockShop = () => {
   };
 
   return (
-    <div
+    <section
       id="shop"
       className="mb-4 grid grid-cols-1 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:p-5 md:mb-6 md:gap-6 md:p-6 lg:mb-7 lg:gap-7 lg:p-7 xl:mb-8 xl:gap-8 xl:p-8"
       // className="mb-8 grid min-h-110 w-full grid-cols-1 border-4 border-red-500 bg-green-100 p-4 md:grid-cols-3 md:gap-8 md:p-6 lg:p-7 xl:p-8"
@@ -96,7 +97,7 @@ const BlockShop = () => {
       </div>
 
       <div className="flex flex-col justify-between sm:col-span-2">
-        <div className="mb-4">
+        <div className="mb-8">
           <div className="mb-4">
             <h3 className="mb-4 text-lg font-semibold leading-tight tracking-tight sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
               Онлайн магазин роздрібної торгівлі
@@ -194,30 +195,26 @@ const BlockShop = () => {
               </div>
             )}
           </div>
-          <div className="flex justify-center">
-            <button
-              onClick={handleClick}
-              className="cursor-pointer text-blue-500"
-            >
-              {showText ? 'Згорнути' : 'Читати більше...'}
-            </button>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="flex justify-center">
+              <button
+                onClick={handleClick}
+                className="cursor-pointer text-xs text-blue-500 hover:text-blue-800 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base"
+              >
+                {showText ? 'Згорнути' : 'Читати більше'}
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="mt-auto">
-          <a
-            href="https://380500014529.flpuretail.com/uk/"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="flex items-center gap-4 border-[3px] border-transparent bg-bluecolor p-4 hover:bg-redcolor hover:text-white sm:border-[4px] md:border-[5px] lg:border-[6px] xl:border-[7px] 2xl:border-[8px]"
-          >
-            <p className="flex h-full w-full items-center justify-center text-center">
-              Перейти до магазину
-            </p>
-          </a>
+        <div className="mt-auto grid grid-cols-1 gap-4 md:grid-cols-2">
+          <LinkButton
+            link={'https://380500014529.flpuretail.com/uk/'}
+            title={'Перейти до магазину'}
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

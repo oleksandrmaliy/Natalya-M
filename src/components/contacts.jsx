@@ -15,10 +15,10 @@ const Contacts = () => {
     'size-8 sm:size-8 md:size-8 lg:size-8 xl:size-10 text-white hover:transition-transform hover:ease-in-out hover:duration-300 hover:scale-110';
   return (
     <div className="mx-auto flex justify-center">
-      <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
-        <a href="tel:+380509535273">
+      <div className="grid grid-cols-6 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8">
+        {/* <a href="tel:+380509535273">
           <FiPhoneCall className={iconStyle} />
-        </a>
+        </a> */}
         <a
           href="https://t.me/+380509535273"
           target="_blank"
@@ -53,9 +53,9 @@ const Contacts = () => {
         <a href="https://www.facebook.com/natasha.maliy1" target="_blank">
           <AiOutlineFacebook className={iconStyle} />
         </a>
-        <a href="mailto:maliyyilam1@gmail.com?subject=Замовлення%20продукції%20Форевер&body=Вітаю,%20Наталі!">
+        {/* <a href="mailto:maliyyilam1@gmail.com?subject=Замовлення%20продукції%20Форевер&body=Вітаю,%20Наталі!">
           <RiMailSendLine className={iconStyle} />
-        </a>
+        </a> */}
       </div>
     </div>
   );

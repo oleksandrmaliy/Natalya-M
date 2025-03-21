@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 import foreverBlue from '../assets/images/foreverBlue.jpg';
 import foreverLinks from '../constants/foreverLinks.js';
+import LinkButton from './linkButton.jsx';
 
 const useScrollTrigger = () => {
   const [trigger, setTrigger] = useState(0);
@@ -76,7 +77,7 @@ const BlockForever = () => {
   };
 
   return (
-    <div
+    <section
       id="forever"
       className="mb-4 grid grid-cols-1 gap-4 bg-sky-100 p-4 sm:mb-5 sm:grid-cols-3 sm:gap-5 sm:p-5 md:mb-6 md:p-6 lg:mb-7 lg:p-7 xl:mb-8 xl:p-8"
     >
@@ -97,7 +98,7 @@ const BlockForever = () => {
       </div>
 
       <div className="flex flex-col justify-between sm:col-span-2">
-        <div className="mb-4">
+        <div className="mb-8">
           <div className="mb-4">
             <h3 className="mb-4 text-lg font-semibold leading-tight tracking-tight sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
               Forever Living Products
@@ -179,7 +180,7 @@ const BlockForever = () => {
               </div>
             )}
           </div>
-          <div className="flex justify-center text-blue-500">
+          <div className="flex justify-center text-xs text-blue-500 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base">
             <button onClick={handleClick}>
               {showText ? 'Згорнути' : 'Читати більше...'}
             </button>
@@ -187,13 +188,13 @@ const BlockForever = () => {
         </div>
 
         <div className="mt-auto">
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {foreverLinks.map(({ title, url }) => (
               <li
                 key={nanoid()}
-                className="rounded-xl bg-bluecolor p-2 hover:bg-redcolor hover:text-white lg:px-6 xl:px-2"
+                className="rounded-xl bg-bluecolor hover:bg-redcolor hover:text-white"
               >
-                <a
+                {/* <a
                   href={url}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
@@ -202,13 +203,14 @@ const BlockForever = () => {
                   <p className="flex h-full w-full items-center justify-center text-center">
                     {title}
                   </p>
-                </a>
+                </a> */}
+                <LinkButton title={title} link={url} />
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ import HeroSet from './components/heroSet.jsx';
 import BlockShop from './components/blockShop.jsx';
 import BlockForever from './components/blockForever.jsx';
 import Footer from './components/footer.jsx';
-import ScrollToTopButton from './components/upBottom.jsx';
+import ScrollToTopButton from './components/upButton.jsx';
 
 const headerBgStyles =
   'mb-4 w-full bg-greencolor sm:mb-5 md:mb-6 lg:mb-7 xl:mb-8';
@@ -61,12 +61,13 @@ const App = () => {
         </Container>
       </BgWrapper>
 
-      <HeroSet />
-
-      <Container>
-        <BlockShop />
-        <BlockForever />
-      </Container>
+      <main>
+        <HeroSet />
+        <Container>
+          <BlockShop />
+          <BlockForever />
+        </Container>
+      </main>
 
       <BgWrapper styles={footerBgStyles}>
         <Container>
