@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 import LinkButton from './linkButton';
 
+// import { getScale, handleClick } from '../services/functions';
 import storeBlue from '../assets/images/storeBlue.jpg';
 
 const useScrollTrigger = () => {
@@ -54,6 +55,7 @@ const BlockShop = () => {
     }, 300);
   }, [scrollTrigger, inView]);
 
+  // getScale();
   const getScale = () => {
     switch (animationStage) {
       case 'scale-up':
@@ -62,7 +64,7 @@ const BlockShop = () => {
         return 1;
     }
   };
-
+  // handleClick({ setShowtext, setEffect });
   const handleClick = () => {
     setShowtext(!showText);
     setEffect(true);
