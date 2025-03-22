@@ -9,6 +9,8 @@ import BlockForever from './components/blockForever.jsx';
 import Footer from './components/footer.jsx';
 import ScrollToTopButton from './components/upButton.jsx';
 
+// import OgImage from './components/image.jsx';
+
 const headerBgStyles =
   'mb-4 w-full bg-greencolor sm:mb-5 md:mb-6 lg:mb-7 xl:mb-8';
 const footerBgStyles = 'w-full bg-greencolor';
@@ -16,6 +18,7 @@ const footerBgStyles = 'w-full bg-greencolor';
 const App = () => {
   return (
     <>
+      {/* <OgImage /> */}
       <Suspense>
         <BgWrapper styles={headerBgStyles}>
           <Container>
