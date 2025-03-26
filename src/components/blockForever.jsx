@@ -35,7 +35,7 @@ const BlockForever = () => {
     threshold: 0.1,
   });
 
-  const identity = 'shop';
+  const identity = 'forever';
 
   useEffect(() => {
     if (effect & !showText) {

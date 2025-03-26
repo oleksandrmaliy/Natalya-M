@@ -15,16 +15,16 @@
 //   return trigger;
 // };
 
-export const getScale = () => {
-  switch (animationStage) {
-    case 'scale-up':
-      return 1.1;
-    default:
-      return 1;
-  }
-};
+// export const getScale = () => {
+//   switch (animationStage) {
+//     case 'scale-up':
+//       return 1.1;
+//     default:
+//       return 1;
+//   }
+// };
 
-export const handleClick = ({ setShowtext, setEffect }) => {
-  setShowtext(!showText);
-  setEffect(true);
-};
+// export const handleClick = ({ setShowtext, setEffect }) => {
+//   setShowtext(!showText);
+//   setEffect(true);
+// };

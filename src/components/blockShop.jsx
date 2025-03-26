@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import LinkButton from './linkButton';
+import dovidnyk from '../assets/books/dovidnyk.pdf';
 
-// import { getScale, handleClick } from '../services/functions';
 import storeBlue from '../assets/images/storeBlue.jpg';
 
 const useScrollTrigger = () => {
@@ -55,7 +55,6 @@ const BlockShop = () => {
     }, 300);
   }, [scrollTrigger, inView]);
 
-  // getScale();
   const getScale = () => {
     switch (animationStage) {
       case 'scale-up':
@@ -64,7 +63,7 @@ const BlockShop = () => {
         return 1;
     }
   };
-  // handleClick({ setShowtext, setEffect });
+
   const handleClick = () => {
     setShowtext(!showText);
     setEffect(true);
@@ -203,6 +202,7 @@ const BlockShop = () => {
             link={'https://380500014529.flpuretail.com/uk/'}
             title={'Перейти до магазину'}
           />
+          <LinkButton link={dovidnyk} title={'Довідник продукції'} />
         </div>
       </div>
     </section>

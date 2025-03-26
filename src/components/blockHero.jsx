@@ -1,9 +1,44 @@
+import { useState, useEffect } from 'react';
+
 import natalya from '../assets/images/Natalya.webp';
 
 const BlockHero = () => {
+  const [showText, setShowText] = useState(true);
+  const [effect, setEffect] = useState(false);
+
+  const identity = 'hero';
+
+  useEffect(() => {
+    if (effect & !showText) {
+      document.getElementById(identity)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [showText, effect]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowText(window.innerWidth >= 1536);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const scrollToFooter = () => {
     const footer = document.getElementById('footer');
     footer?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleClick = () => {
+    setShowText(!showText);
+    setEffect(true);
   };
 
   return (
@@ -22,36 +57,55 @@ const BlockHero = () => {
         </div>
         <div className="flex flex-col justify-between sm:col-span-2">
           <div className="mb-8">
-            <h3 className="mb-4 text-lg font-semibold leading-tight tracking-tight sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
-              Вітаю Вас!
-            </h3>
-            <p className="mb-2">
-              Мене звати Наталя, і я – підприємець компанії Forever Living
-              Products. Познайомившись із цією компанією та спробувавши її
-              продукцію, я зробила важливий вибір – розпочати власну справу, що
-              не лише приносить дохід, а й наповнює моє життя сенсом і свободою.
-            </p>
-            <p className="mb-2">
-              Коли я вперше познайомилася з продукцією Forever, мене вразила її
-              якість і натуральний склад. Я зрозуміла, що хочу не просто
-              користуватися нею сама, а й ділитися цими унікальними продуктами з
-              іншими. Так і почався мій шлях у бізнесі, який відкрив переді мною
-              безліч можливостей.
-            </p>
-            <p className="mb-2">
-              Сьогодні я з упевненістю можу сказати, що Forever – це більше, ніж
-              просто продукція. Це стиль життя, це можливість піклуватися про
-              своє здоров’я, виглядати чудово та почуватися енергійною кожного
-              дня. Крім того, це шанс для кожного, хто хоче змінити своє життя
-              та знайти фінансову незалежність.
-            </p>
-            <p className="">
-              Якщо ви хочете спробувати якісну продукцію Forever або дізнатися
-              більше про можливості, які вона відкриває, буду рада допомогти вам
-              підібрати ідеальний варіант саме для вас. Напишіть мені – з
-              радістю поділюся своїм досвідом та підкажу найкраще рішення для
-              ваших потреб!
-            </p>
+            <div className="mb-4">
+              {' '}
+              <h3 className="mb-4 text-lg font-semibold leading-tight tracking-tight sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
+                Вітаю Вас!
+              </h3>
+              <p className="mb-2">
+                Мене звати Наталя, і я – підприємець компанії Forever Living
+                Products. Познайомившись із цією компанією та спробувавши її
+                продукцію, я зробила важливий вибір – розпочати власну справу,
+                що не лише приносить дохід, а й наповнює моє життя сенсом і
+                свободою.
+              </p>
+              {showText && (
+                <div>
+                  <p className="mb-2">
+                    Коли я вперше познайомилася з продукцією Forever, мене
+                    вразила її якість і натуральний склад. Я зрозуміла, що хочу
+                    не просто користуватися нею сама, а й ділитися цими
+                    унікальними продуктами з іншими. Так і почався мій шлях у
+                    бізнесі, який відкрив переді мною безліч можливостей.
+                  </p>
+                  <p className="mb-2">
+                    Сьогодні я з упевненістю можу сказати, що Forever – це
+                    більше, ніж просто продукція. Це стиль життя, це можливість
+                    піклуватися про своє здоров’я, виглядати чудово та
+                    почуватися енергійною кожного дня. Крім того, це шанс для
+                    кожного, хто хоче змінити своє життя та знайти фінансову
+                    незалежність.
+                  </p>
+                  <p className="">
+                    Якщо ви хочете спробувати якісну продукцію Forever або
+                    дізнатися більше про можливості, які вона відкриває, буду
+                    рада допомогти вам підібрати ідеальний варіант саме для вас.
+                    Напишіть мені – з радістю поділюся своїм досвідом та підкажу
+                    найкраще рішення для ваших потреб!
+                  </p>
+                </div>
+              )}
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="flex justify-center">
+                <button
+                  onClick={handleClick}
+                  className="cursor-pointer text-xs font-medium text-blue-500 hover:text-blue-800 sm:text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base"
+                >
+                  {showText ? 'Згорнути' : 'Читати більше'}
+                </button>
+              </div>
+            </div>
           </div>
           <div className="mt-auto grid grid-cols-1 gap-4 sm:grid-cols-2">
             <button
